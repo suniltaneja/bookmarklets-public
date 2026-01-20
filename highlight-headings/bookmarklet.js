@@ -27,11 +27,21 @@ javascript: (() => {
     box-shadow:0 6px 20px rgba(0,0,0,.3);
   `;
 
+  const colors = {
+    h1: "#e53935",
+    h2: "#fb8c00",
+    h3: "#fdd835",
+    h4: "#43a047",
+    h5: "#1e88e5",
+    h6: "#8e24aa"
+  };
+
   panel.innerHTML = `
     <strong style="display:block;margin-bottom:6px">Headings</strong>
     ${["h1","h2","h3","h4","h5","h6"].map(h => `
-      <label style="display:block;cursor:pointer">
+      <label style="display:flex;align-items:center;cursor:pointer;gap:6px">
         <input type="checkbox" data-h="${h}" checked>
+        <span style="width:12px;height:12px;background:${colors[h]};border-radius:2px;flex-shrink:0"></span>
         ${h.toUpperCase()} (${document.querySelectorAll(h).length})
       </label>
     `).join("")}
