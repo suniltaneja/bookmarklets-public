@@ -1,1 +1,0 @@
-javascript:(()=>{const s=document.createElement("script");s.src="https://suniltaneja.github.io/bookmarklets-public/my-bookmarklet.js?"+Date.now();document.head.appendChild(s);})();
